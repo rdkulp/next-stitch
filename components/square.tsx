@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export default function Square() {
-  const [value, setValue] = useState(null);
+  const [value, setValue] = useState<string | null>(null);
   
   function handleClick() {
     if (value === null) {
