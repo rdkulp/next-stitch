@@ -1,297 +1,300 @@
 "use client";
 
+import { useState, ReactElement } from 'react';
 import Square from './square';
 import ColorPicker from "@/components/ColorPicker";
 
 export default function Board() {
+  const [selectedColor, setSelectedColor] = useState<string>('black'); // Default color
+  
   return (
     <>
       <div className="board-row">
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
       </div>
       <div className="board-row">
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
       </div>
       <div className="board-row">
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
       </div>
       <div className="board-row">
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
       </div>
       <div className="board-row">
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
       </div>
       <div className="board-row">
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
       </div>
       <div className="board-row">
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
       </div>
       <div className="board-row">
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
       </div>
       <div className="board-row">
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
       </div>
       <div className="board-row">
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
       </div>
       <div className="board-row">
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
       </div>
       <div className="board-row">
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
       </div>
       <div className="board-row">
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
       </div>
       <div className="board-row">
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
       </div>
       <div className="board-row">
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
+        <Square color={selectedColor} />
       </div>
-      <ColorPicker />
+      <ColorPicker onColorSelected={setSelectedColor} />
     </>
   );
 }

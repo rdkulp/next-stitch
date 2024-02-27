@@ -1,12 +1,14 @@
 import { useState, ReactElement } from 'react';
 
-export default function Square() {
+export default function Square({ color }: { color: string }) {
   const [value, setValue] = useState<ReactElement | null>(null);
   
   function handleClick() {
     if (value === null) {
       setValue(
-        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="none"><path stroke="#000" stroke-linecap="round" stroke-width="4" d="M32 32 2 2M2 32 32 2"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="none">
+          <path stroke={color} strokeLinecap="round" strokeWidth="4" d="M32 32 2 2M2 32 32 2"/>
+        </svg>
       );
     } else {
       setValue(null);
@@ -14,10 +16,7 @@ export default function Square() {
   }
 
   return (
-    <button 
-      className="square"
-      onClick={handleClick}
-    >
+    <button className="square" onClick={handleClick}>
       {value}
     </button>
   );

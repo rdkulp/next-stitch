@@ -1,21 +1,31 @@
 import { useState } from "react";
 
-export default function ColorPicker() {
-  const [value, setValue] = useState(null);
+export default function ColorPicker({ onColorSelected }: { onColorSelected: (color: string) => void }) {
+  // Use a state to track the currently selected color
+  const [selectedColor, setSelectedColor] = useState<string | null>(null);
 
-  function handleClick() {
-    // set selected color to style background value
-    
+  // Define the colors in an array for easier management
+  const colors = ['orange', 'red', 'yellow', 'green', 'blue', 'purple'];
+
+  function handleClick(color: string) {
+    // Toggle the selected state for the color
+    setSelectedColor(currentColor => {
+      const newColor = currentColor === color ? null : color;
+      onColorSelected(newColor || 'defaultColor'); // Replace 'defaultColor' as needed
+      return newColor;
+    });
   }
 
   return (
     <div className="color-picker">
-      <button className="picker-square" style={{ background: 'red' }} onClick={handleClick}></button>
-      <button className="picker-square" style={{ background: 'orange' }} onClick={handleClick}></button>
-      <button className="picker-square" style={{ background: 'yellow' }} onClick={handleClick}></button>
-      <button className="picker-square" style={{ background: 'green' }} onClick={handleClick}></button>
-      <button className="picker-square" style={{ background: 'blue' }} onClick={handleClick}></button>
-      <button className="picker-square" style={{ background: 'purple' }} onClick={handleClick}></button>
+      {colors.map((color) => (
+        <button
+          key={color}
+          className={"picker-square " + (selectedColor === color ? 'selected' : '')}
+          style={{ background: color }}
+          onClick={() => handleClick(color)}
+        ></button>
+      ))}
     </div>
   );
 }
