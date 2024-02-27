@@ -1,6 +1,7 @@
 "use client";
 
 import Square from './square';
+import ColorPicker from "@/components/ColorPicker";
 
 export default function Board() {
   return (
@@ -290,6 +291,7 @@ export default function Board() {
         <Square />
         <Square />
       </div>
+      <ColorPicker />
     </>
   );
 }
