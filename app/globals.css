@@ -81,30 +81,51 @@ ul {
 
 body {
   font-family: sans-serif;
-  margin: 20px;
+  margin: 0;
   padding: 0;
   color: #000;
+  margin-top: 72px;
 }
 
-.square, .picker-square {
-  background: #fff;
-  border: 1px solid #999;
-  float: left;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
-  padding: 0;
-  text-align: center;
-  width: 34px;
+.board-row {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.board-row:last-child {
+  margin-top: 72px;
 }
 
 .board-row:after {
   clear: both;
   content: '';
   display: table;
+}
+
+.square, .picker-square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid #999;
+  aspect-ratio: 1 / 1;
+  font-weight: bold;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  max-height: 50px;
+  max-width: 50px;
+}
+
+.square svg {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .status {

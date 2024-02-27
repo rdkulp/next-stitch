@@ -17,7 +17,7 @@ export default function ColorPicker({ onColorSelected }: { onColorSelected: (col
   }
 
   return (
-    <div className="color-picker">
+    <div className="board-row">
       {colors.map((color) => (
         <button
           key={color}

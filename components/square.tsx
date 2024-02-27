@@ -6,7 +6,7 @@ export default function Square({ color }: { color: string }) {
   function handleClick() {
     if (value === null) {
       setValue(
-        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="none">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" preserveAspectRatio="xMidYMid meet" fill="none">
           <path stroke={color} strokeLinecap="round" strokeWidth="4" d="M32 32 2 2M2 32 32 2"/>
         </svg>
       );
