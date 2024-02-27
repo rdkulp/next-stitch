@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState, ReactElement } from 'react';
 
 export default function Square() {
-  const [value, setValue] = useState<HTMLElement | null>(null);
+  const [value, setValue] = useState<ReactElement | null>(null);
   
   function handleClick() {
     if (value === null) {
