@@ -71,11 +71,11 @@ export default function ColorPicker({ onColorSelected }: { onColorSelected: (col
   ];
 
   const chunkedColors = (colors: string[], size: number) =>
-    colors.reduce((resultArray, item, index) => {
+    colors.reduce((resultArray: any[][], item, index) => {
       const chunkIndex = Math.floor(index / size);
 
       if (!resultArray[chunkIndex]) {
-        resultArray[chunkIndex] = []; // start a new chunk
+        resultArray[chunkIndex] = [];
       }
 
       resultArray[chunkIndex].push(item);
