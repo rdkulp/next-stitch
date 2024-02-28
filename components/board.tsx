@@ -9,6 +9,7 @@ export default function Board() {
   
   return (
     <>
+    <div className="board">
       <div className="board-row">
         <Square color={selectedColor} />
         <Square color={selectedColor} />
@@ -361,6 +362,7 @@ export default function Board() {
         <Square color={selectedColor} />
         <Square color={selectedColor} />
       </div>
+    </div>
       <ColorPicker onColorSelected={setSelectedColor} />
     </>
   );

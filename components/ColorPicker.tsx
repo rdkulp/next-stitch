@@ -65,9 +65,7 @@ export default function ColorPicker({ onColorSelected }: { onColorSelected: (col
     `Linen`,
     `MistyRose`,
     `NavajoWhite`,
-    `Silver`,
     `SlateGray`,
-    `Gray`,
   ];
 
   const chunkedColors = (colors: string[], size: number) =>
