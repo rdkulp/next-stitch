@@ -5,9 +5,90 @@ export default function ColorPicker({ onColorSelected }: { onColorSelected: (col
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
 
   // Define the colors in an array for easier management
-  const colors = ['orange', 'red', 'yellow', 'green', 'blue', 'purple'];
+  const colors = [
+    `CornflowerBlue`,
+    `DarkBlue`,
+    `DodgerBlue`,
+    `SkyBlue`,
+    `PowderBlue`,
+    `RoyalBlue`,
+    `SteelBlue`,
+    `Teal`,
+    `Azure`,
+    `DeepSkyBlue`,
+    `Turquoise`,
+    `Cyan`,
+    `PaleTurquoise`,
+    `Indigo`,
+    `DarkMagenta`,
+    `BlueViolet`,
+    `MediumOrchid`,
+    `Plum`,
+    `SlateBlue`,
+    `DarkSlateBlue`,
+    `DeepPink`,
+    `Magenta`,
+    `Thistle`,
+    `AntiqueWhite`,
+    `Bisque`,
+    `Black`,
+    `FireBrick`,
+    `Chocolate`,
+    `Coral`,
+    `Crimson`,
+    `Maroon`,
+    `Red`,
+    `OrangeRed`,
+    `Tomato`,
+    `Salmon`,
+    `BurlyWood`,
+    `DarkGoldenRod`,
+    `SaddleBrown`,
+    `DarkSlateGray`,
+    `DarkGreen`,
+    `DarkOliveGreen`,
+    `Chartreuse`,
+    `DarkSeaGreen`,
+    `ForestGreen`,
+    `LightGreen`,
+    `LimeGreen`,
+    `MediumSeaGreen`,
+    `MediumSpringGreen`,
+    `YellowGreen`,
+    `Darkorange`,
+    `DarkSalmon`,
+    `GhostWhite`,
+    `Gold`,
+    `GoldenRod`,
+    `IndianRed`,
+    `LightPink`,
+    `LightSkyBlue`,
+    `LightSteelBlue`,
+    `Linen`,
+    `MistyRose`,
+    `NavajoWhite`,
+    `RosyBrown`,
+    `Silver`,
+    `SlateGray`,
+    `Gray`,
+  ];
 
-  function handleClick(color: string) {
+  const chunkedColors = (colors, size) =>
+    colors.reduce((resultArray, item, index) => {
+      const chunkIndex = Math.floor(index / size);
+
+      if (!resultArray[chunkIndex]) {
+        resultArray[chunkIndex] = []; // start a new chunk
+      }
+
+      resultArray[chunkIndex].push(item);
+
+      return resultArray;
+  },[]);
+
+  const colorGroups = chunkedColors(colors, 10);
+  
+  function onColorSelect(color: string) {
     // Toggle the selected state for the color
     setSelectedColor(currentColor => {
       const newColor = currentColor === color ? null : color;
@@ -17,15 +98,21 @@ export default function ColorPicker({ onColorSelected }: { onColorSelected: (col
   }
 
   return (
-    <div className="board-row">
-      {colors.map((color) => (
-        <button
-          key={color}
-          className={"picker-square " + (selectedColor === color ? 'selected' : '')}
-          style={{ background: color }}
-          onClick={() => handleClick(color)}
-        ></button>
+    <>
+    <div className="color-picker">
+      {colorGroups.map((group, index) => (
+        <div key={index} className="board-row">
+          {group.map((color) => (
+            <button
+              key={color}
+              className={`picker-square ${selectedColor === color ? 'selected' : ''}`}
+              style={{ background: color }}
+              onClick={() => onColorSelect(color)}
+            ></button>
+          ))}
+        </div>
       ))}
     </div>
+    </>
   );
 }
