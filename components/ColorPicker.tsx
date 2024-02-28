@@ -14,7 +14,6 @@ export default function ColorPicker({ onColorSelected }: { onColorSelected: (col
     `RoyalBlue`,
     `SteelBlue`,
     `Teal`,
-    `Azure`,
     `DeepSkyBlue`,
     `Turquoise`,
     `Cyan`,
@@ -32,15 +31,16 @@ export default function ColorPicker({ onColorSelected }: { onColorSelected: (col
     `AntiqueWhite`,
     `Bisque`,
     `Black`,
-    `FireBrick`,
     `Chocolate`,
+    `Darkorange`,
     `Coral`,
     `Crimson`,
     `Maroon`,
-    `Red`,
+    `FireBrick`,
     `OrangeRed`,
     `Tomato`,
-    `Salmon`,
+    `DarkSalmon`,
+    `RosyBrown`,
     `BurlyWood`,
     `DarkGoldenRod`,
     `SaddleBrown`,
@@ -55,8 +55,6 @@ export default function ColorPicker({ onColorSelected }: { onColorSelected: (col
     `MediumSeaGreen`,
     `MediumSpringGreen`,
     `YellowGreen`,
-    `Darkorange`,
-    `DarkSalmon`,
     `GhostWhite`,
     `Gold`,
     `GoldenRod`,
@@ -67,13 +65,12 @@ export default function ColorPicker({ onColorSelected }: { onColorSelected: (col
     `Linen`,
     `MistyRose`,
     `NavajoWhite`,
-    `RosyBrown`,
     `Silver`,
     `SlateGray`,
     `Gray`,
   ];
 
-  const chunkedColors = (colors, size) =>
+  const chunkedColors = (colors: string[], size: number) =>
     colors.reduce((resultArray, item, index) => {
       const chunkIndex = Math.floor(index / size);
 
