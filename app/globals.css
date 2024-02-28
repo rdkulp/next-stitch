@@ -3,9 +3,13 @@ body {
   font-family: sans-serif;
   margin: 72px 0 72px;
   padding: 0;
-  color: #000;
+  color: #efefef;
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+}
 
 button {
   border: none;
