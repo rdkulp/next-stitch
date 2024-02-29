@@ -16,7 +16,7 @@ button {
 }
 
 button.square {
-  border:1px solid lightslategray;
+  border: 1px solid whitesmoke;
 }
 
 * {
