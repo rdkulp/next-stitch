@@ -1,10 +1,12 @@
-import Board from "@/components/board";
+"use client";
+
+import Canvas from "@/components/canvas";
 
 export default function Home() {
   return (
     <>
       <main>
-        <Board />
+        <Canvas />
       </main>
       <footer>
         <p>
